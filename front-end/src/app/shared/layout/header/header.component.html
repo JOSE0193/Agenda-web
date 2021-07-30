@@ -1,0 +1,37 @@
+<nav class="navbar navbar-dark bg-dark">
+  <span>
+    <div class="btn-group" dropdown>
+      <button id="button-animated" dropdownToggle type="button" class="btn btn-dark"
+          aria-controls="dropdown-animated">
+          <img class="avatar" src="./assets/icones/card-list.svg" alt="">
+        <span class="caret"></span>
+      </button>
+
+      <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-animated">
+        <li role="menuitem"><a class="nav nav-link" [routerLink]="['/home']"
+          routerLinkActive="active">Home<span class="sr-only">(current)</span>
+        </a></li>
+        <li role="menuitem">  <a class="nav-link" [routerLink]="['/cadastrar']"
+          routerLinkActive="active">Cadastrar</a>
+        </li>
+      </ul>
+    </div>
+  </span>
+
+  <span>
+    <a class="title" [routerLink]="['/']" routerLinkActive="active">
+      <img class="logo" src="/assets/img/agenda1.svg" alt="icone-agenda"/>
+      Agenda
+    </a>
+  </span>
+  <span>
+    <a class="login" routerLinkActive="active" [routerLink]="['/login']">
+      <img class="avatar align-center" src="./assets/icones/person-circle.svg" alt="avatar-usuario">
+      <a>Entrar</a>
+    </a>
+  </span>
+
+</nav>
+
+
