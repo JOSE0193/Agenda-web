@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AgendamentosComponent } from './agendamentos.component';
+import { AgendamentosComponent } from './agendamentos-component/agendamentos.component';
 
 const routes: Routes = [
   {

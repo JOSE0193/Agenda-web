@@ -27,3 +27,8 @@
   font-weight: bold;
   color: white;
 }
+
+.navbar .drop{
+  background-color: grey;
+  color: white;
+}

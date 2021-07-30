@@ -1,9 +1,10 @@
-import { ProfissionaisComponent } from './profissionais.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { ProfissionaisComponent } from './profissionais-component/profissionais.component';
+
 const routes: Routes = [
-  {path: "", component: ProfissionaisComponent}
+  {path: '', component: ProfissionaisComponent}
 ];
 
 @NgModule({

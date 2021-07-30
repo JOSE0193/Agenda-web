@@ -7,13 +7,18 @@
         <span class="caret"></span>
       </button>
 
-      <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
+      <ul class="drop dropdown-menu" id="dropdown-animated" *dropdownMenu
           role="menu" aria-labelledby="button-animated">
-        <li role="menuitem"><a class="nav nav-link" [routerLink]="['/home']"
-          routerLinkActive="active">Home<span class="sr-only">(current)</span>
-        </a></li>
-        <li role="menuitem">  <a class="nav-link" [routerLink]="['/cadastrar']"
-          routerLinkActive="active">Cadastrar</a>
+        <li role="menuitem">
+          <a class="nav nav-link" routerLinkActive="active" [routerLink]="['/home']">
+            Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li role="menuitem">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/cadastrar']">
+            Cadastrar
+          </a>
         </li>
       </ul>
     </div>

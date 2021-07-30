@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ServicoComponent } from './servico.component';
+import { ServicoComponent } from './servico-component/servico.component';
 
 const routes: Routes = [
   {
