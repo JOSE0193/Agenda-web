@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ServicoRoutingModule } from './servico-routing.module';
-import { SharedModule } from '../shared/shared.module';
 import { ServicoComponent } from './servico-component/servico.component';
 
 
@@ -10,8 +9,7 @@ import { ServicoComponent } from './servico-component/servico.component';
   declarations: [ServicoComponent],
   imports: [
     CommonModule,
-    ServicoRoutingModule,
-    SharedModule
+    ServicoRoutingModule
   ],
   exports: [
     ServicoComponent

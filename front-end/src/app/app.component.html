@@ -1,6 +1,52 @@
-  <app-header></app-header>
-  <app-footer></app-footer>
+<nav class="navbar navbar-dark bg-dark">
+  <span>
+    <div class="btn-group" dropdown>
+      <button id="button-animated" dropdownToggle type="button" class="btn btn-dark"
+          aria-controls="dropdown-animated">
+          <img class="avatar" src="./assets/icones/card-list.svg" alt="">
+        <span class="caret"></span>
+      </button>
+
+      <ul class="drop dropdown-menu" id="dropdown-animated" *dropdownMenu
+          role="menu" aria-labelledby="button-animated">
+        <li role="menuitem">
+          <a class="nav nav-link" routerLinkActive="active" [routerLink]="['/']">
+            Ínicio
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li role="menuitem">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/cadastro']">
+            Cadastrar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </span>
+
+  <span>
+    <a class="title" routerLinkActive="active-link" [routerLink]="['/']">
+      <img class="logo" src="/assets/img/agenda1.svg" alt="icone-agenda"/>
+      Agenda
+    </a>
+  </span>
+  <span>
+    <a class="login" routerLinkActive="active" [routerLink]="['/login']">
+      <img class="avatar align-center" src="./assets/icones/person-circle.svg" alt="avatar-usuario">
+      <a>Entrar</a>
+    </a>
+  </span>
+
+</nav>
+
+<nav class="footer navbar fixed-bottom navbar-light bg-secondary">
+  <span class="navbar-text-dark">
+    Produzido por Lima Consultoria
+  </span>
+</nav>
+<div class="container">
   <router-outlet></router-outlet>
+</div>
 
 
 

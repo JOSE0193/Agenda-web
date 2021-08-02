@@ -3,9 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
-
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -16,8 +13,6 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -31,9 +26,17 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     AccordionModule.forRoot(),
     ButtonsModule.forRoot()
   ],
-  exports: [
-    HeaderComponent,
-    FooterComponent
+  exports:[
+    CommonModule,
+    RouterModule,
+    BsDropdownModule,
+    TooltipModule,
+    ModalModule,
+    CollapseModule,
+    CarouselModule,
+    BrowserAnimationsModule,
+    AccordionModule,
+    ButtonsModule
   ]
 })
 export class SharedModule { }

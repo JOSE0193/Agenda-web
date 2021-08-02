@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { AgendamentosRoutingModule } from './agendamentos-routing.module';
 import { AgendamentosComponent } from './agendamentos-component/agendamentos.component';
-import { SharedModule } from '../shared/shared.module';
-
 
 @NgModule({
   declarations: [
@@ -12,8 +10,7 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    AgendamentosRoutingModule,
-    SharedModule
+    AgendamentosRoutingModule
   ],
   exports: [
     AgendamentosComponent

@@ -1,0 +1,33 @@
+<form class="register card">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="name" class="form-control" id="nome"
+    aria-describedby="emailHelp" placeholder="Nome Completo">
+  </div>
+  <div class="form-group">
+    <label for="cnpj">CNPJ</label>
+    <input type="cnpj" class="form-control" id="cnpj"
+    aria-describedby="emailHelp" placeholder="Cnpj">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email"
+    aria-describedby="emailHelp" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="password">Senha</label>
+    <input type="password" class="form-control" id="password" placeholder="Senha">
+  </div>
+  <div class="form-group">
+    <label for="password">Confirmar Senha</label>
+    <input type="password" class="form-control" id="password" placeholder="Senha">
+  </div>
+  <span class="button card-body">
+    <span class="button1">
+      <button type="submit" class="btn btn-primary btn-lg" (click)="fazerCadastro()">Salvar</button>
+    </span>
+    <span class="button2">
+      <button type="submit" class="btn btn-primary btn-lg" (click)="cancelarCadastro()">Cancelar</button>
+    </span>
+   </span>
+</form>
