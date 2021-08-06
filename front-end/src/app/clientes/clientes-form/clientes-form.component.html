@@ -1,0 +1,34 @@
+<form class="needs-validation" novalidate [formGroup]="form">
+  <div class="form-row" [ngClass]="aplicaCssErro(nome)">
+    <div class="col-sm-12">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Nome" value="Mark" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="form-row" [ngClass]="aplicaCssErro(email)">
+      <div class="col-sm-12">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" placeholder="Email" value="Mark" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="form-row" [ngClass]="aplicaCssErro(nome)">
+        <div class="col-sm-12">
+          <label for="nome">First name</label>
+          <input type="text" class="form-control" id="nome" placeholder="Nome" value="Mark" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="form-row" [ngClass]="aplicaCssErro(nome)">
+          <div class="col-sm-12">
+            <label for="nome">First name</label>
+            <input type="text" class="form-control" id="nome" placeholder="Nome" value="Mark" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+</form>

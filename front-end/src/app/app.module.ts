@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { CadastroModule } from './cadastro/cadastro.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { CadastroModule } from './cadastro/cadastro.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    SharedModule,
-    CadastroModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

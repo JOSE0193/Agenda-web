@@ -10,9 +10,13 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { AlertModalComponent } from './alert-modal/alert-modal.component';
 
 @NgModule({
   declarations: [
+    AlertModalComponent,
+
   ],
   imports: [
     CommonModule,
@@ -24,7 +28,8 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     CarouselModule.forRoot(),
     BrowserAnimationsModule,
     AccordionModule.forRoot(),
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
+    AlertModule.forRoot()
   ],
   exports:[
     CommonModule,
@@ -36,7 +41,9 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     CarouselModule,
     BrowserAnimationsModule,
     AccordionModule,
-    ButtonsModule
+    ButtonsModule,
+    AlertModule,
+    AlertModalComponent
   ]
 })
 export class SharedModule { }
