@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -11,12 +12,13 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { AlertModule } from 'ngx-bootstrap/alert';
-import { AlertModalComponent } from './alert-modal/alert-modal.component';
+import { AlertModalComponent } from './alert-modal/alert-modal-component/alert-modal.component';
+import { ErroMsgComponent } from './erro-msg/erro-msg.component';
 
 @NgModule({
   declarations: [
     AlertModalComponent,
-
+    ErroMsgComponent
   ],
   imports: [
     CommonModule,
@@ -26,24 +28,22 @@ import { AlertModalComponent } from './alert-modal/alert-modal.component';
     ModalModule.forRoot(),
     CollapseModule.forRoot(),
     CarouselModule.forRoot(),
-    BrowserAnimationsModule,
     AccordionModule.forRoot(),
     ButtonsModule.forRoot(),
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    HttpClientModule
   ],
   exports:[
-    CommonModule,
-    RouterModule,
     BsDropdownModule,
     TooltipModule,
     ModalModule,
     CollapseModule,
     CarouselModule,
-    BrowserAnimationsModule,
     AccordionModule,
     ButtonsModule,
     AlertModule,
-    AlertModalComponent
+    AlertModalComponent,
+    ErroMsgComponent
   ]
 })
 export class SharedModule { }

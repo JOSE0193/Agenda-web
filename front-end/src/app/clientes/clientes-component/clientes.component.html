@@ -23,11 +23,11 @@
             <td>{{ cliente.nome}}</td>
             <td>
               <span class="float-right">
-                <button class="btn-btn-outline-warning mb-1 btn-sm" (click)="onEdit(cliente.id)">
+                <button class="btn-btn-outline-warning mb-1 btn-sm" (click)="onEdit()">
                   Atualizar
                 </button>
 
-                <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete(cliente)">
+                <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete()">
                   Remover
                 </button>
               </span>
@@ -37,7 +37,7 @@
     </table>
 
     <ng-template #loading>
-      <span>Carregamento de Cursos...</span>
+      <span>Carregamento de Clientes...</span>
     </ng-template>
 
   </div>
@@ -45,7 +45,7 @@
 
 <ng-template #deleteModal>
   <div>
-    <p>Tem certeza que deseja remover esse curso?</p>
+    <p>Tem certeza que deseja remover esse cliente?</p>
     <button type="button" class="btn btn-default" (click)="onConfirmDelete()">Sim</button>
     <button type="button" class="btn btn-primary" (click)="onDeclineDelete()">Não</button>
   </div>

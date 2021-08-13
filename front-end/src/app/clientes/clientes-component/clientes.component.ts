@@ -3,8 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { EMPTY, Observable, Subject } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { AlertModalService } from 'src/app/shared/alert-modal.service';
-import { ClientesService } from '../clientes.service';
+import { AlertModalService } from 'src/app/shared/alert-modal/alert-modal.service';
+import { ClientesService } from '../clientes-services/clientes.service';
 import { Cliente } from './../cliente';
 
 @Component({
@@ -16,13 +16,12 @@ import { Cliente } from './../cliente';
 export class ClientesComponent implements OnInit {
 
   deleteModalRef!: BsModalRef;
-  @ViewChild('deleteModal', {static: true}) deleteModal;
+  //@ViewChild('deleteModal', {static: true}) deleteModal;
 
   clientes$!: Observable<Cliente[]>;
   error$ = new Subject<boolean>();
 
   constructor(
-    private modalService: BsModalService,
     private alertService: AlertModalService,
     private service: ClientesService,
     private router: Router,
@@ -34,7 +33,7 @@ export class ClientesComponent implements OnInit {
   }
 
   onRefresh(){
-    this.clientes$ = this.service.list()
+    this.clientes$ = this.service.findAll()
       .pipe(
         catchError(error => {console.error
           this.handleError();
@@ -44,15 +43,29 @@ export class ClientesComponent implements OnInit {
   }
 
   handleError(){
-    this.alertService.showAlertDanger('Erro ao carregar cursos. Tente novamente mais tarde.');
+    this.alertService.showAlertDanger('Erro ao carregar a lista de clientes. Tente novamente mais tarde.');
   }
 
   onEdit(){
-    this.router.navigate(['novo, id'], {relativeTo: this.route});
+    this.router.navigate(['edit, id'], {relativeTo: this.route});
   }
 
   onDelete(){
 
+    // const result$ = this.alertService.showConfirm('Confirmacao', 'Tem certeza que deseja remover esse curso?');
+    // result$.asObservable()
+    // .pipe(
+    //   take(1),
+    //   switchMap(result => result ? this.service.remove(curso.id) : EMPTY)
+    // )
+    // .subscribe(
+    //   success => {
+    //     this.onRefresh();
+    //   },
+    //   error => {
+    //     this.alertService.showAlertDanger('Erro ao remover curso. Tente novamente mais tarde.');
+    //   }
+    // );
   }
 
 

@@ -6,6 +6,8 @@ import { ClientesRoutingModule } from './clientes-routing.module';
 import { ClientesComponent } from './clientes-component/clientes.component';
 import { ClientesFormComponent } from './clientes-form/clientes-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ClientesRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    SharedModule
   ],
   exports: [
     ClientesComponent,

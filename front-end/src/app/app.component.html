@@ -15,31 +15,11 @@
             <span class="sr-only">(current)</span>
           </a>
         </li>
-        <li role="menuitem" *ngIf="!mostrarItensNav">
+        <li role="menuitem">
           <a class="nav-link" routerLinkActive="active" [routerLink]="['/cadastro']">
             Cadastrar
           </a>
         </li>
-        <li role="menuitem" *ngIf="mostrarItensNav">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['/agendamentos']">
-            Agendamentos
-          </a>
-        </li>
-        <li role="menuitem" *ngIf="mostrarItensNav">
-            <a class="nav nav-link" routerLinkActive="active" [routerLink]="['/clientes']">
-              Clientes
-            </a>
-          </li>
-          <li role="menuitem" *ngIf="mostrarItensNav">
-            <a class="nav-link" routerLinkActive="active" [routerLink]="['/servicos']">
-              Serviços
-            </a>
-          </li>
-          <li role="menuitem" *ngIf="mostrarItensNav">
-            <a class="nav nav-link" routerLinkActive="active" [routerLink]="['/profissionais']">
-              Profissionais
-            </a>
-          </li>
       </ul>
     </div>
   </span>
@@ -64,6 +44,7 @@
     Produzido por Lima Consultoria
   </span>
 </nav>
+
 <div class="container">
   <router-outlet></router-outlet>
 </div>

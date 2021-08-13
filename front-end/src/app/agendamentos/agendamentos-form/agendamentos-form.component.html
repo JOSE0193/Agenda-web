@@ -1,0 +1,45 @@
+<form class="needs-validation" novalidate [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <div class="form-row" [ngClass]="aplicaCssErro('data')">
+    <div class="col-sm-12">
+      <label for="data" class="control-label">Data</label>
+      <input type="date" class="form-control" formControlName="data"
+      id="data" placeholder="Data">
+    </div>
+  </div>
+
+  <div class="form-row" [ngClass]="aplicaCssErro('observacoes')">
+    <div class="col-sm-12">
+      <label for="observacoes">Observacoes</label>
+      <input type="text" class="form-control" id="observacoes"
+      formControlName="observacoes">
+    </div>
+  </div>
+
+  <div class="form-row" [ngClass]="aplicaCssErro('cliente')">
+    <div class="col-sm-12">
+      <label for="cliente">Cliente</label>
+      <input type="text" class="form-control" id="cliente"
+      formControlName="cliente">
+    </div>
+  </div>
+
+  <div class="form-row" [ngClass]="aplicaCssErro('profissional')">
+    <div class="col-sm-12">
+      <label for="profissional">Responsável</label>
+      <input type="text" class="form-control" id="profissional"
+      formControlName="profissional">
+    </div>
+  </div>
+
+  <div class="form-row" [ngClass]="aplicaCssErro('servico')">
+    <div class="col-sm-12">
+      <label for="servico">Serviço</label>
+      <input type="text" class="form-control" id="servico"
+      formControlName="servico">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="salvar()">Salvar</button>
+  <button type="reset" class="btn btn-default" (click)="resetar()">Cancelar</button>
+
+</form>
